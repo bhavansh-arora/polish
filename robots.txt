@@ -1,0 +1,4 @@
+# Preview copy — keep it out of search results so it doesn't compete with polish.nz.
+# Remove this file when the site goes live on polish.nz.
+User-agent: *
+Disallow: /

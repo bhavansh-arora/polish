@@ -1,12 +1,12 @@
-// Builds the static site: src/pages/*.html + partials -> dist/
-// Usage: node build.mjs   (no dependencies)
-import { readFileSync, writeFileSync, mkdirSync, readdirSync, cpSync, rmSync, existsSync } from "node:fs";
+// Builds the pages: _src/pages/*.html + _src/partials -> *.html at the repository root.
+// assets/, css/ and js/ are served as they are, so the repository root is the deployable site
+// (GitHub Pages serves it at polish.codebunny.net). Usage: node build.mjs   (no dependencies)
+import { readFileSync, writeFileSync, readdirSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = dirname(fileURLToPath(import.meta.url));
-const src = join(root, "src");
-const out = join(root, "dist");
+const src = join(root, "_src");
 const SITE = "https://polish.nz";
 
 const read = (p) => readFileSync(join(src, p), "utf8");
@@ -44,10 +44,6 @@ function fill(tpl, ctx) {
     .replace(/\{\{(\w+)\}\}/g, (_, k) => (ctx[k] ?? ""));
 }
 
-if (existsSync(out)) rmSync(out, { recursive: true });
-mkdirSync(out, { recursive: true });
-for (const dir of ["assets", "css", "js"]) cpSync(join(src, dir), join(out, dir), { recursive: true });
-
 const pages = readdirSync(join(src, "pages")).filter((f) => f.endsWith(".html"));
 for (const file of pages) {
   const { meta, body } = parse(file);
@@ -66,6 +62,6 @@ for (const file of pages) {
     navLinks, mobileLinks, scripts,
   };
   ctx.content = fill(body, ctx);
-  writeFileSync(join(out, file), fill(partials.layout, ctx));
+  writeFileSync(join(root, file), fill(partials.layout, ctx));
   console.log("built", file);
 }

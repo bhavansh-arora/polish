@@ -4,15 +4,17 @@ A multi-page, mobile-first redesign of [polish.nz](https://polish.nz) built as a
 It uses Polish's own brand guide (Midnight Black, Soft White, Rose `#E58F99`, Slate, Manrope), its hero film,
 photography and published copy.
 
-**Deployable output is in `dist/`** — plain static files. Upload the folder to any host (Netlify, Vercel,
-Cloudflare Pages, S3) or open it with a local server:
+**Live preview:** [polish.codebunny.net](https://polish.codebunny.net) — served by GitHub Pages from the root of `main`.
+
+The repository root is the deployable site: plain static files, no build step needed to host it.
+To edit pages, change the templates in `_src/` and rebuild:
 
 ```bash
-node build.mjs                                   # rebuild dist/ from src/
-python3 -m http.server 4173 --directory dist     # http://localhost:4173
+node build.mjs                    # rebuilds the *.html pages at the root from _src/
+python3 -m http.server 4173       # preview at http://localhost:4173
 ```
 
-No dependencies. Node 18+ for the build script. Run the commands from the repository root.
+No dependencies. Node 18+ for the build script.
 
 ## Pages
 
@@ -33,21 +35,24 @@ No dependencies. Node 18+ for the build script. Run the commands from the reposi
 ## Structure
 
 ```
-src/
-  pages/      one file per page (front matter: title, description, nav, scripts)
+*.html        built pages (don't edit — rebuilt from _src/)
+_src/
+  pages/      one template per page (front matter: title, description, nav, scripts)
   partials/   layout, header, footer, cta — shared by every page
-  css/        polish.css — the whole design system (tokens, components, responsive)
-  js/         main.js (motion, header, dial…), booking.js, assessment.js, forms.js, data.js
-  assets/     images, film, logos
-build.mjs     assembles src/ into dist/
+css/          polish.css — the whole design system (tokens, components, responsive)
+js/           main.js (motion, header, dial…), booking.js, assessment.js, forms.js, data.js
+assets/       images, film, logos
+build.mjs     builds _src/ into the pages at the root
+_config.yml   keeps README, the reply draft and sources off the published site
+robots.txt    keeps the preview out of search engines (remove for the real launch)
 ```
 
 ## Going live
 
-- **Bookings & enquiries** — in `src/partials/layout.html`, set `bookingEndpoint` / `enquiryEndpoint` to a
+- **Bookings & enquiries** — in `_src/partials/layout.html`, set `bookingEndpoint` / `enquiryEndpoint` to a
   form endpoint (Formspree, Make, Zapier, or a Cal.com / Google Calendar webhook). Requests are POSTed as JSON.
   Until then, the confirmation screens offer a pre-filled email to `hello@polish.nz` so nothing is lost.
 - **Availability** — `booking.js` currently shows indicative weekday slots (Auckland time). Connect it to
   Melissa's real calendar before launch.
-- **To confirm with Melissa** — pillar names (`src/js/data.js`), coaching engagement shapes, keynote topics,
+- **To confirm with Melissa** — pillar names (`js/data.js`), coaching engagement shapes, keynote topics,
   and any testimonials to add.

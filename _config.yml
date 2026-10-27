@@ -1,0 +1,6 @@
+# GitHub Pages: publish the built site only.
+exclude:
+  - README.md
+  - REPLY-TO-MELISSA.md
+  - build.mjs
+  - _src
