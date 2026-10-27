@@ -69,9 +69,14 @@
     doc.style.setProperty("--sp", max > 0 ? (y / max).toFixed(4) : 0);
     if (header && !document.body.classList.contains("menu-open")) header.classList.toggle("is-hidden", y > lastY && y > 400);
     if (sticky) {
+      // Only offer the floating CTA when the reader pauses or scrolls back up, so it never sits on text mid-read.
       var past = heroEl ? y > heroEl.offsetHeight * 0.8 : y > 600;
       var nearEnd = y > max - 900;
-      sticky.classList.toggle("is-visible", past && !nearEnd);
+      var goingDown = y > lastY + 2;
+      if (!past || nearEnd || goingDown) sticky.classList.remove("is-visible");
+      else if (y < lastY - 2) sticky.classList.add("is-visible");
+      clearTimeout(onScroll.t);
+      onScroll.t = setTimeout(function () { if (past && !nearEnd) sticky.classList.add("is-visible"); }, 900);
     }
     lastY = y;
   }
@@ -171,7 +176,7 @@
       var n = +r.value, total = n * 995, net = total / 2;
       outN.textContent = n + (n === 1 ? " person" : " people");
       outT.textContent = fmt(net);
-      outS.textContent = "You save " + fmt(total - net) + " with RBP co-funding";
+      outS.textContent = fmt(total - net);
       r.style.setProperty("--p", ((n - r.min) / (r.max - r.min) * 100) + "%");
     };
     r.addEventListener("input", up); up();
