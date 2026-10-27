@@ -6,8 +6,7 @@
   <title>{{title}}</title>
   <meta name="description" content="{{description}}">
   <meta name="robots" content="{{robots}}">
-  <meta name="theme-color" content="#000000">
-  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0a0a0b">
   <link rel="canonical" href="{{canonical}}">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Polish">
@@ -20,9 +19,17 @@
   <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600;700&display=swap">
   <link rel="stylesheet" href="css/polish.css">
+  <link rel="stylesheet" href="css/components.css">
   <script>
+    (function (d) {
+      var h = d.documentElement, s = function (k) { try { return sessionStorage.getItem(k); } catch (e) { return null; } };
+      h.classList.remove("no-js");
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) h.classList.add("has-motion");
+      if (s("polish-seen")) h.classList.add("no-preload");
+      if (s("polish-curtain")) { h.classList.add("is-entering"); try { sessionStorage.removeItem("polish-curtain"); } catch (e) {} }
+    })(document);
     window.POLISH_CONFIG = {
       email: "hello@polish.nz",
       bookingEndpoint: "",  /* e.g. a Formspree / Make / Cal.com webhook URL */
@@ -32,15 +39,43 @@
 </head>
 <body class="{{bodyClass}}">
   <a class="skip-link" href="#main">Skip to content</a>
-  <div class="page-fade" aria-hidden="true"></div>
-  <div class="grain" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <div class="preloader" aria-hidden="true">
+    <div class="preloader__glow"></div>
+    <div class="preloader__top"><span class="label">Polish · Auckland, Aotearoa</span><span class="label">Executive coaching · AI leadership</span></div>
+    <div class="preloader__inner">
+      <img class="preloader__mark" src="assets/brand/polish-p-mark.png" alt="" width="92" height="90">
+      <div class="preloader__name"><span class="pl-mask"><span>Lead</span></span> <span class="pl-mask"><span><em>well.</em></span></span></div>
+      <div class="preloader__tag"><span class="pl-mask"><span>strategy · passion · growth</span></span></div>
+    </div>
+    <div class="preloader__bottom">
+      <div class="preloader__words">{{preloaderWords}}</div>
+      <div class="preloader__count"><span>0</span><sup>%</sup></div>
+    </div>
+    <div class="preloader__bar"><i></i></div>
+  </div>
+
+  <div class="curtain" aria-hidden="true">
+    <div class="curtain__inner">
+      <img src="assets/brand/polish-logo-landscape-REV.png" alt="" width="230" height="62">
+      <span class="curtain__page"><span class="curtain__dot"></span><span>Polish</span></span>
+    </div>
+  </div>
+
 {{> header}}
   <main id="main">
 {{content}}
   </main>
 {{> footer}}
+
+  <a class="sticky-cta" href="coaching.html#book">Book a discovery call {{icon:arr}}</a>
+
+  <script src="js/vendor/gsap.min.js" defer></script>
+  <script src="js/vendor/ScrollTrigger.min.js" defer></script>
   <script src="js/data.js" defer></script>
   <script src="js/main.js" defer></script>
   {{scripts}}
+  <script src="js/motion.js" defer></script>
 </body>
 </html>

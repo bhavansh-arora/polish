@@ -61,7 +61,7 @@
     '<div class="quiz__top"><span data-count-label>Statement 1 of ' + pillars.length + '</span><span>How true is this for you today?</span></div>' +
     '<div class="quiz__bar"><span></span></div>' + qHTML +
     '<div class="quiz__nav"><button type="button" class="back-btn" data-qback><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Back</button>' +
-    '<button type="button" class="btn btn--rose" data-qnext disabled>Next<svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>';
+    '<button type="button" class="btn btn--rose" data-qnext disabled>Next<span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button></div>';
 
   var qs = Array.prototype.slice.call(quiz.querySelectorAll(".q"));
   var next = quiz.querySelector("[data-qnext]"), back = quiz.querySelector("[data-qback]");
@@ -135,7 +135,7 @@
           '<div class="feature__visual" data-result-radar></div>' +
           '<div class="cards-2" style="gap:12px"><div class="card" style="padding:20px"><span class="card__num">STRONGEST</span><p style="color:var(--text);font-weight:600;margin-top:8px">' + pillars[strongest].title + '</p></div><div class="card" style="padding:20px"><span class="card__num">BIGGEST OPPORTUNITY</span><p style="color:var(--rose);font-weight:600;margin-top:8px">' + pillars[gaps[0]].title + "</p></div></div>" +
           '<div><p class="prog__label">Recommended next step</p><p class="muted">' + rec + "</p></div>" +
-          '<div class="btn-row"><a class="btn btn--rose" data-magnetic href="coaching.html?focus=' + focus + "&score=" + pct + '#book">Talk it through with Melissa<svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="link-arrow" href="' + recHref + '">' + recLabel + '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>' +
+          '<div class="btn-row"><a class="btn btn--rose" data-magnetic href="coaching.html?focus=' + focus + "&score=" + pct + '#book">Talk it through with Melissa<span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a><a class="link-arrow" href="' + recHref + '">' + recLabel + '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>' +
           '<button type="button" class="back-btn" data-restart style="align-self:flex-start"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Retake the check</button>' +
         "</div>" +
       "</div>";

@@ -20,10 +20,10 @@ No dependencies. Node 18+ for the build script.
 
 | Page | What's on it |
 | --- | --- |
-| `index.html` | Film hero, approach statement, pathways, coaching feature, nine-pillar dial, programmes, readiness check teaser, founder, insights, FAQ |
+| `index.html` | Preloader, framed film hero with rotating word, lit statement, “sound familiar?”, bento, **flip the thought**, pinned **nine pillars**, word band, stacking process cards, flagship programme with mini RBP calculator, meet Melissa, readiness check, journal, FAQ |
 | `coaching.html` | Executive coaching page with the **4-step booking flow** (`#book`) |
 | `programmes.html` | Programmes, **RBP co-funding calculator**, online courses, comparison table |
-| `approach.html` | The nine pillars (dial + grid), why Polish, how we work |
+| `approach.html` | The nine pillars (pinned sideways scroll + question grid), flip the thought, why Polish |
 | `speaking.html` | Signature keynotes, formats, booking process |
 | `about.html` | Melissa's story, values, who Polish works with |
 | `assessment.html` | **AI Leadership Readiness Check** — 9 questions, score, radar, recommendation |
@@ -39,8 +39,10 @@ No dependencies. Node 18+ for the build script.
 _src/
   pages/      one template per page (front matter: title, description, nav, scripts)
   partials/   layout, header, footer, cta — shared by every page
-css/          polish.css — the whole design system (tokens, components, responsive)
-js/           main.js (motion, header, dial…), booking.js, assessment.js, forms.js, data.js
+css/          polish.css (design system) + components.css (booking, readiness check, forms)
+js/           main.js (preloader, curtain, header, rotator, flip card…), motion.js (GSAP scroll motion),
+              booking.js, assessment.js, forms.js, data.js (pillars — also used by the build)
+js/vendor/    GSAP + ScrollTrigger (self-hosted)
 assets/       images, film, logos
 build.mjs     builds _src/ into the pages at the root
 _config.yml   keeps README, the reply draft and sources off the published site

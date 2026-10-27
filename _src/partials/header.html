@@ -1,22 +1,26 @@
   <header class="site-header">
-    <div class="container site-header__inner">
+    <div class="site-header__inner">
       <a class="brand" href="index.html" aria-label="Polish — home">
-        <img src="assets/brand/polish-logo-landscape-REV.png" alt="Polish" width="111" height="30">
+        <img src="assets/brand/polish-logo-landscape-REV.png" alt="Polish" width="104" height="28">
+        <span class="brand__tag">Executive coaching</span>
       </a>
       <nav class="nav" aria-label="Main">{{navLinks}}</nav>
-      <div class="header-actions">
-        <a class="btn btn--rose btn--sm" href="coaching.html#book" data-magnetic>Book a conversation{{icon:arrow}}</a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span></span><span></span></button>
+      <div class="site-header__end">
+        <a class="btn btn--rose btn--sm site-header__cta" href="coaching.html#book">Book a call {{icon:btn}}</a>
+        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><span class="menu-btn__label">Menu</span><span class="menu-btn__icon" aria-hidden="true"><i></i><i></i></span></button>
       </div>
     </div>
   </header>
-  <div class="mobile-menu" id="mobile-menu">
-    <ul class="mobile-menu__links">{{mobileLinks}}</ul>
-    <div class="mobile-menu__foot">
-      <a class="btn btn--rose btn--block" href="coaching.html#book">Book a discovery conversation{{icon:arrow}}</a>
-      <div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
-        <a href="mailto:hello@polish.nz">hello@polish.nz</a>
-        <span>Auckland · <span data-nz-time></span></span>
+  <div class="menu" id="menu" aria-hidden="true">
+    <div class="menu__inner">
+      <div>
+        <span class="label">Navigate</span>
+        <nav class="menu__nav" aria-label="Mobile">{{menuLinks}}</nav>
+      </div>
+      <div class="menu__foot">
+        <a class="btn btn--rose" href="coaching.html#book">Book a discovery call {{icon:btn}}</a>
+        <a class="menu__mail" href="mailto:hello@polish.nz">hello@polish.nz</a>
+        <span class="label"><span class="live-dot" aria-hidden="true"></span><span data-nz-time></span> in Auckland</span>
       </div>
     </div>
   </div>

@@ -6,8 +6,7 @@
   <title>AI Leadership Readiness Check — Polish</title>
   <meta name="description" content="A free 3-minute self-assessment across the nine pillars of human-centred AI leadership. Get an instant readiness profile and a recommended next step.">
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#000000">
-  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0a0a0b">
   <link rel="canonical" href="https://polish.nz/assessment">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Polish">
@@ -20,9 +19,17 @@
   <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600;700&display=swap">
   <link rel="stylesheet" href="css/polish.css">
+  <link rel="stylesheet" href="css/components.css">
   <script>
+    (function (d) {
+      var h = d.documentElement, s = function (k) { try { return sessionStorage.getItem(k); } catch (e) { return null; } };
+      h.classList.remove("no-js");
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) h.classList.add("has-motion");
+      if (s("polish-seen")) h.classList.add("no-preload");
+      if (s("polish-curtain")) { h.classList.add("is-entering"); try { sessionStorage.removeItem("polish-curtain"); } catch (e) {} }
+    })(document);
     window.POLISH_CONFIG = {
       email: "hello@polish.nz",
       bookingEndpoint: "",  /* e.g. a Formspree / Make / Cal.com webhook URL */
@@ -30,85 +37,124 @@
     };
   </script>
 </head>
-<body class="">
+<body class="page-assessment">
   <a class="skip-link" href="#main">Skip to content</a>
-  <div class="page-fade" aria-hidden="true"></div>
-  <div class="grain" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <div class="preloader" aria-hidden="true">
+    <div class="preloader__glow"></div>
+    <div class="preloader__top"><span class="label">Polish · Auckland, Aotearoa</span><span class="label">Executive coaching · AI leadership</span></div>
+    <div class="preloader__inner">
+      <img class="preloader__mark" src="assets/brand/polish-p-mark.png" alt="" width="92" height="90">
+      <div class="preloader__name"><span class="pl-mask"><span>Lead</span></span> <span class="pl-mask"><span><em>well.</em></span></span></div>
+      <div class="preloader__tag"><span class="pl-mask"><span>strategy · passion · growth</span></span></div>
+    </div>
+    <div class="preloader__bottom">
+      <div class="preloader__words"><span>Strategy</span><span>Communication</span><span>Safety</span><span>Culture</span><span>Change</span><span>Capability</span><span>Responsibility</span><span>Talent</span><span>Humanity</span></div>
+      <div class="preloader__count"><span>0</span><sup>%</sup></div>
+    </div>
+    <div class="preloader__bar"><i></i></div>
+  </div>
+
+  <div class="curtain" aria-hidden="true">
+    <div class="curtain__inner">
+      <img src="assets/brand/polish-logo-landscape-REV.png" alt="" width="230" height="62">
+      <span class="curtain__page"><span class="curtain__dot"></span><span>Polish</span></span>
+    </div>
+  </div>
+
   <header class="site-header">
-    <div class="container site-header__inner">
+    <div class="site-header__inner">
       <a class="brand" href="index.html" aria-label="Polish — home">
-        <img src="assets/brand/polish-logo-landscape-REV.png" alt="Polish" width="111" height="30">
+        <img src="assets/brand/polish-logo-landscape-REV.png" alt="Polish" width="104" height="28">
+        <span class="brand__tag">Executive coaching</span>
       </a>
       <nav class="nav" aria-label="Main"><a class="nav__link" href="coaching.html">Coaching</a><a class="nav__link" href="programmes.html">Programmes</a><a class="nav__link" href="approach.html">Approach</a><a class="nav__link" href="speaking.html">Speaking</a><a class="nav__link" href="about.html">About</a><a class="nav__link" href="insights.html">Insights</a></nav>
-      <div class="header-actions">
-        <a class="btn btn--rose btn--sm" href="coaching.html#book" data-magnetic>Book a conversation<svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span></span><span></span></button>
+      <div class="site-header__end">
+        <a class="btn btn--rose btn--sm site-header__cta" href="coaching.html#book">Book a call <span class="btn__icon" aria-hidden="true"><svg  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><span class="menu-btn__label">Menu</span><span class="menu-btn__icon" aria-hidden="true"><i></i><i></i></span></button>
       </div>
     </div>
   </header>
-  <div class="mobile-menu" id="mobile-menu">
-    <ul class="mobile-menu__links"><li><a href="coaching.html">Coaching<small>01</small></a></li><li><a href="programmes.html">Programmes<small>02</small></a></li><li><a href="approach.html">Approach<small>03</small></a></li><li><a href="speaking.html">Speaking<small>04</small></a></li><li><a href="about.html">About<small>05</small></a></li><li><a href="insights.html">Insights<small>06</small></a></li><li><a href="contact.html">Contact<small>07</small></a></li></ul>
-    <div class="mobile-menu__foot">
-      <a class="btn btn--rose btn--block" href="coaching.html#book">Book a discovery conversation<svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
-        <a href="mailto:hello@polish.nz">hello@polish.nz</a>
-        <span>Auckland · <span data-nz-time></span></span>
+  <div class="menu" id="menu" aria-hidden="true">
+    <div class="menu__inner">
+      <div>
+        <span class="label">Navigate</span>
+        <nav class="menu__nav" aria-label="Mobile"><a href="index.html"><span class="menu__num">01</span>Home</a><a href="coaching.html"><span class="menu__num">02</span>Executive <em>coaching</em></a><a href="programmes.html"><span class="menu__num">03</span>Programmes</a><a href="approach.html"><span class="menu__num">04</span>The nine <em>pillars</em></a><a href="speaking.html"><span class="menu__num">05</span>Speaking</a><a href="about.html"><span class="menu__num">06</span>About <em>Melissa</em></a><a href="contact.html"><span class="menu__num">07</span>Say <em>hello</em></a></nav>
+      </div>
+      <div class="menu__foot">
+        <a class="btn btn--rose" href="coaching.html#book">Book a discovery call <span class="btn__icon" aria-hidden="true"><svg  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <a class="menu__mail" href="mailto:hello@polish.nz">hello@polish.nz</a>
+        <span class="label"><span class="live-dot" aria-hidden="true"></span><span data-nz-time></span> in Auckland</span>
       </div>
     </div>
   </div>
 
   <main id="main">
-    <section class="page-hero" aria-labelledby="page-title">
-      <div class="container">
-        <nav class="crumbs" aria-label="Breadcrumb" data-reveal><a href="index.html">Home</a><span aria-hidden="true">/</span><span>Readiness check</span></nav>
-        <div data-quiz-intro>
-          <span class="eyebrow" data-reveal>Free · 3 minutes · 9 statements</span>
-          <h1 class="h1 page-hero__title" id="page-title" data-split>How ready is your leadership for <em>AI-driven change?</em></h1>
-          <div class="page-hero__row">
-            <p class="lead measure-lg" data-reveal>Rate nine short statements — one for each pillar of human-centred AI leadership. You'll get an instant readiness profile, your biggest opportunity and a recommended next step. No sign-up needed.</p>
-            <ul class="checks" data-reveal style="--d:.1s"><li>Private — your answers stay in your browser</li><li>Results you can bring to a discovery conversation</li></ul>
+    <section class="phero phero--plain" aria-labelledby="page-title">
+      <div class="phero__frame">
+        <div class="phero__media" aria-hidden="true"><img src="assets/img/coast-7.5.jpg" alt="" width="1280" height="720" style="opacity:.35"></div>
+        <div class="phero__shade" aria-hidden="true"></div>
+        <div class="phero__content">
+          <nav class="phero__crumbs label" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span>Readiness check</span></nav>
+          <h1 class="h-display phero__title" id="page-title">How ready are you for <em>AI change?</em></h1>
+          <div class="phero__foot">
+            <p class="lede">Nine short statements — one per pillar. An instant readiness profile, your biggest opportunity and a recommended next step.</p>
+            <div class="phero__facts"><span class="pill">3 minutes</span><span class="pill">No sign-up</span><span class="pill">Private to your browser</span></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section section--flush-top" aria-label="Readiness check">
+    <section class="section" aria-label="Readiness check">
       <div class="container">
-        <div class="panel" style="padding:clamp(1.5rem,1rem + 3vw,4.5rem)" data-reveal>
+        <div class="head-top"><span class="label">(01) — The check</span><span class="label">How true is each statement today?</span></div>
+        <div class="panel" style="padding:clamp(24px,3vw,64px)">
           <div class="quiz" data-quiz><noscript><p>The readiness check needs JavaScript. You can <a class="rose" href="coaching.html#book">book a discovery conversation</a> instead.</p></noscript></div>
           <div class="result" data-result></div>
         </div>
       </div>
     </section>
 
-    <section class="section section--line" aria-labelledby="after-title">
+    <section class="section section--flush-top" aria-labelledby="after-title">
       <div class="container">
-        <div class="section-head">
-          <div>
-            <span class="eyebrow" data-reveal>After the check</span>
-            <h2 class="h2" id="after-title" data-split>Turn your score into<br>a <em>plan.</em></h2>
-          </div>
-          <p class="lead" data-reveal>Your results travel with you into the booking form, so your discovery conversation starts where you are.</p>
+        <div class="head-top"><span class="label">(02) — After the check</span><span class="label">Turn a score into a plan</span></div>
+        <div class="head head--split">
+          <h2 class="h-xl" id="after-title" data-split>Your results <em>travel with you.</em></h2>
+          <p class="lede">They're attached to the booking form, so your discovery conversation starts where you actually are.</p>
         </div>
-        <div class="cards-3" data-stagger=".08">
-          <a class="card card--link" href="coaching.html#book" data-reveal><span class="card__num">FOR YOU</span><h3 class="h4">Executive coaching</h3><p>Work one-to-one on the pillars that matter most to you.</p></a>
-          <a class="card card--link" href="programmes.html" data-reveal><span class="card__num">FOR YOUR TEAM</span><h3 class="h4">Programmes</h3><p>Build shared capability with RBP co-funding available.</p></a>
-          <a class="card card--link" href="speaking.html" data-reveal><span class="card__num">FOR YOUR ORGANISATION</span><h3 class="h4">Keynotes</h3><p>Align your wider organisation around a calmer, clearer view.</p></a>
+        <div class="bento">
+          <a class="tile tile--rose b-third" href="coaching.html#book"><div class="tile__top"><span class="label">For you</span><span class="circle-btn" aria-hidden="true"><svg  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div><h3 class="tile__lead">Executive <em>coaching</em></h3></a>
+          <a class="tile b-third" href="programmes.html"><div class="tile__top"><span class="label">For your team</span><span class="circle-btn" aria-hidden="true"><svg  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div><h3 class="tile__lead">Team <em>programmes</em></h3></a>
+          <a class="tile tile--light b-third" href="speaking.html"><div class="tile__top"><span class="label">For your organisation</span><span class="circle-btn" aria-hidden="true"><svg  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div><h3 class="tile__lead">Keynote <em>speaking</em></h3></a>
         </div>
       </div>
     </section>
 
   </main>
   <footer class="site-footer">
-    <div class="container">
+    <div class="site-footer__inner">
       <div class="footer-top">
-        <div class="footer-brand">
-          <img src="assets/brand/polish-logo-landscape-REV.png" alt="Polish" width="126" height="34" loading="lazy">
-          <p>Leadership development for the age of AI. Helping leaders, teams and organisations across Aotearoa and Australia lead well through change.</p>
-          <span class="tagline">strategy · passion · growth</span>
+        <div>
+          <span class="label label--dot">Ready when you are</span>
+          <h2 class="h-xl footer-top__title">Let's talk about <em>your</em> change.</h2>
+        </div>
+        <div class="footer-top__side">
+          <p class="lede">A relaxed, confidential thirty minutes about where you are, what you want to change, and whether Polish is the right fit.</p>
+          <div class="row">
+            <a class="btn btn--rose" href="coaching.html#book" data-cursor="Book">Book a discovery call <span class="btn__icon" aria-hidden="true"><svg  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+            <a class="btn btn--glass" href="contact.html">Send an enquiry</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col footer-col--brand">
+          <img src="assets/brand/polish-logo-landscape-REV.png" alt="Polish" width="112" height="30" loading="lazy">
+          <p class="small">Leadership development for the age of AI — helping leaders, teams and organisations across Aotearoa and Australia lead well through change.</p>
+          <span class="label label--rose">strategy · passion · growth</span>
         </div>
         <div class="footer-col">
-          <h4>Work with us</h4>
+          <span class="label">Work with us</span>
           <ul>
             <li><a href="coaching.html">Executive coaching</a></li>
             <li><a href="programmes.html">Programmes &amp; courses</a></li>
@@ -117,7 +163,7 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Polish</h4>
+          <span class="label">Polish</span>
           <ul>
             <li><a href="approach.html">The nine pillars</a></li>
             <li><a href="about.html">About Melissa</a></li>
@@ -126,7 +172,7 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Get in touch</h4>
+          <span class="label">Say hello</span>
           <ul>
             <li><a href="mailto:hello@polish.nz">hello@polish.nz</a></li>
             <li><a href="tel:+6421646489">+64 21 646 489</a></li>
@@ -135,21 +181,23 @@
           </ul>
         </div>
       </div>
-      <div class="footer-word" aria-hidden="true">lead <em>well</em></div>
-      <div class="footer-bottom">
-        <span>© <span data-year>2026</span> Polish. All rights reserved.</span>
-        <div class="footer-bottom__links">
-          <a href="https://polish.nz/privacy-policy">Privacy</a>
-          <a href="https://polish.nz/terms">Terms</a>
-          <a href="https://polish.nz/terms/business">Terms of Business</a>
-          <a href="https://polish.nz/brand">Brand</a>
-        </div>
+      <div class="footer-mark" aria-hidden="true"><span>Lead</span> <em>well.</em></div>
+      <div class="footer-base">
+        <span>© <span data-year>2026</span> Polish · Auckland, NZ</span>
+        <span><a href="https://polish.nz/privacy-policy">Privacy</a> · <a href="https://polish.nz/terms">Terms</a> · <a href="https://polish.nz/terms/business">Terms of business</a></span>
+        <a href="#main">Back to top ↑</a>
       </div>
     </div>
   </footer>
 
+
+  <a class="sticky-cta" href="coaching.html#book">Book a discovery call <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+
+  <script src="js/vendor/gsap.min.js" defer></script>
+  <script src="js/vendor/ScrollTrigger.min.js" defer></script>
   <script src="js/data.js" defer></script>
   <script src="js/main.js" defer></script>
   <script src="js/assessment.js" defer></script>
+  <script src="js/motion.js" defer></script>
 </body>
 </html>

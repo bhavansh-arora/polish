@@ -23,6 +23,8 @@ of it. The changes are about turning more of your visitors into qualified coachi
    interactive section on the home page and a full page of its own.
 5. **An RBP co-funding calculator.** HR leads can see what a team of twelve would cost after the 50%
    co-funding, and their enquiry arrives with the headcount already filled in.
+6. **"Flip the thought".** A switch on the home page that turns a common AI fear into a calmer reframe,
+   so visitors get a ten-second taste of working with you before they ever book.
 
 It works on phones and tablets, uses your brand guide throughout, and can be added to your current site or
 delivered as a complete site. I've filled a few gaps in your voice for you to check, such as the pillar

@@ -4,15 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Ideas for polish.nz — Polish</title>
-  <meta name="description" content="A short set of ideas for the Polish executive coaching page, prepared for Melissa Frerk by Code Bunny — with each idea built and working.">
+  <meta name="description" content="A short set of ideas for the Polish executive coaching page, prepared for Melissa Frerk by Code Bunny — each one built and working.">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="theme-color" content="#000000">
-  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0a0a0b">
   <link rel="canonical" href="https://polish.nz/ideas">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Polish">
   <meta property="og:title" content="Ideas for polish.nz — Polish">
-  <meta property="og:description" content="A short set of ideas for the Polish executive coaching page, prepared for Melissa Frerk by Code Bunny — with each idea built and working.">
+  <meta property="og:description" content="A short set of ideas for the Polish executive coaching page, prepared for Melissa Frerk by Code Bunny — each one built and working.">
   <meta property="og:image" content="https://polish.nz/opengraph.jpg">
   <meta property="og:locale" content="en_NZ">
   <meta name="twitter:card" content="summary_large_image">
@@ -20,9 +19,17 @@
   <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600;700&display=swap">
   <link rel="stylesheet" href="css/polish.css">
+  <link rel="stylesheet" href="css/components.css">
   <script>
+    (function (d) {
+      var h = d.documentElement, s = function (k) { try { return sessionStorage.getItem(k); } catch (e) { return null; } };
+      h.classList.remove("no-js");
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) h.classList.add("has-motion");
+      if (s("polish-seen")) h.classList.add("no-preload");
+      if (s("polish-curtain")) { h.classList.add("is-entering"); try { sessionStorage.removeItem("polish-curtain"); } catch (e) {} }
+    })(document);
     window.POLISH_CONFIG = {
       email: "hello@polish.nz",
       bookingEndpoint: "",  /* e.g. a Formspree / Make / Cal.com webhook URL */
@@ -30,148 +37,144 @@
     };
   </script>
 </head>
-<body class="">
+<body class="page-ideas">
   <a class="skip-link" href="#main">Skip to content</a>
-  <div class="page-fade" aria-hidden="true"></div>
-  <div class="grain" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <div class="preloader" aria-hidden="true">
+    <div class="preloader__glow"></div>
+    <div class="preloader__top"><span class="label">Polish · Auckland, Aotearoa</span><span class="label">Executive coaching · AI leadership</span></div>
+    <div class="preloader__inner">
+      <img class="preloader__mark" src="assets/brand/polish-p-mark.png" alt="" width="92" height="90">
+      <div class="preloader__name"><span class="pl-mask"><span>Lead</span></span> <span class="pl-mask"><span><em>well.</em></span></span></div>
+      <div class="preloader__tag"><span class="pl-mask"><span>strategy · passion · growth</span></span></div>
+    </div>
+    <div class="preloader__bottom">
+      <div class="preloader__words"><span>Strategy</span><span>Communication</span><span>Safety</span><span>Culture</span><span>Change</span><span>Capability</span><span>Responsibility</span><span>Talent</span><span>Humanity</span></div>
+      <div class="preloader__count"><span>0</span><sup>%</sup></div>
+    </div>
+    <div class="preloader__bar"><i></i></div>
+  </div>
+
+  <div class="curtain" aria-hidden="true">
+    <div class="curtain__inner">
+      <img src="assets/brand/polish-logo-landscape-REV.png" alt="" width="230" height="62">
+      <span class="curtain__page"><span class="curtain__dot"></span><span>Polish</span></span>
+    </div>
+  </div>
+
   <header class="site-header">
-    <div class="container site-header__inner">
+    <div class="site-header__inner">
       <a class="brand" href="index.html" aria-label="Polish — home">
-        <img src="assets/brand/polish-logo-landscape-REV.png" alt="Polish" width="111" height="30">
+        <img src="assets/brand/polish-logo-landscape-REV.png" alt="Polish" width="104" height="28">
+        <span class="brand__tag">Executive coaching</span>
       </a>
       <nav class="nav" aria-label="Main"><a class="nav__link" href="coaching.html">Coaching</a><a class="nav__link" href="programmes.html">Programmes</a><a class="nav__link" href="approach.html">Approach</a><a class="nav__link" href="speaking.html">Speaking</a><a class="nav__link" href="about.html">About</a><a class="nav__link" href="insights.html">Insights</a></nav>
-      <div class="header-actions">
-        <a class="btn btn--rose btn--sm" href="coaching.html#book" data-magnetic>Book a conversation<svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span></span><span></span></button>
+      <div class="site-header__end">
+        <a class="btn btn--rose btn--sm site-header__cta" href="coaching.html#book">Book a call <span class="btn__icon" aria-hidden="true"><svg  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><span class="menu-btn__label">Menu</span><span class="menu-btn__icon" aria-hidden="true"><i></i><i></i></span></button>
       </div>
     </div>
   </header>
-  <div class="mobile-menu" id="mobile-menu">
-    <ul class="mobile-menu__links"><li><a href="coaching.html">Coaching<small>01</small></a></li><li><a href="programmes.html">Programmes<small>02</small></a></li><li><a href="approach.html">Approach<small>03</small></a></li><li><a href="speaking.html">Speaking<small>04</small></a></li><li><a href="about.html">About<small>05</small></a></li><li><a href="insights.html">Insights<small>06</small></a></li><li><a href="contact.html">Contact<small>07</small></a></li></ul>
-    <div class="mobile-menu__foot">
-      <a class="btn btn--rose btn--block" href="coaching.html#book">Book a discovery conversation<svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
-        <a href="mailto:hello@polish.nz">hello@polish.nz</a>
-        <span>Auckland · <span data-nz-time></span></span>
+  <div class="menu" id="menu" aria-hidden="true">
+    <div class="menu__inner">
+      <div>
+        <span class="label">Navigate</span>
+        <nav class="menu__nav" aria-label="Mobile"><a href="index.html"><span class="menu__num">01</span>Home</a><a href="coaching.html"><span class="menu__num">02</span>Executive <em>coaching</em></a><a href="programmes.html"><span class="menu__num">03</span>Programmes</a><a href="approach.html"><span class="menu__num">04</span>The nine <em>pillars</em></a><a href="speaking.html"><span class="menu__num">05</span>Speaking</a><a href="about.html"><span class="menu__num">06</span>About <em>Melissa</em></a><a href="contact.html"><span class="menu__num">07</span>Say <em>hello</em></a></nav>
+      </div>
+      <div class="menu__foot">
+        <a class="btn btn--rose" href="coaching.html#book">Book a discovery call <span class="btn__icon" aria-hidden="true"><svg  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <a class="menu__mail" href="mailto:hello@polish.nz">hello@polish.nz</a>
+        <span class="label"><span class="live-dot" aria-hidden="true"></span><span data-nz-time></span> in Auckland</span>
       </div>
     </div>
   </div>
 
   <main id="main">
-    <section class="page-hero" aria-labelledby="page-title">
-      <div class="container">
-        <nav class="crumbs" aria-label="Breadcrumb" data-reveal><span>Prepared for Melissa Frerk</span><span aria-hidden="true">·</span><span>by Bhavansh, Code Bunny</span></nav>
-        <span class="eyebrow" data-reveal>A few short ideas</span>
-        <h1 class="h1 page-hero__title" id="page-title" data-split>More qualified enquiries from <em>senior leaders.</em></h1>
-        <div class="page-hero__row">
-          <p class="lead measure-lg" data-reveal>You kindly agreed to a few written ideas for the executive coaching side of Polish. Rather than only describe them, we built each one into a working version of the site — so you can click through and feel the difference.</p>
-          <div class="btn-row" data-reveal style="--d:.1s">
-            <a class="btn btn--rose" href="coaching.html" data-magnetic>See the coaching page<svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-            <a class="btn" href="index.html">Explore the full site</a>
+    <section class="phero phero--plain" aria-labelledby="page-title">
+      <div class="phero__frame">
+        <div class="phero__content">
+          <span class="phero__crumbs label">Prepared for Melissa Frerk · by Bhavansh, Code Bunny</span>
+          <h1 class="h-display phero__title" id="page-title">More qualified <em>enquiries.</em></h1>
+          <div class="phero__foot">
+            <p class="lede">You kindly agreed to a few written ideas for the coaching side of Polish. Rather than only describe them, we built each one into a working version of the site — so you can feel the difference.</p>
+            <div class="row"><a class="btn btn--rose" href="coaching.html">See the coaching page <span class="btn__icon" aria-hidden="true"><svg  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a><a class="btn btn--glass" href="index.html">Explore the full site</a></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section section--flush-top" aria-labelledby="keep-title">
+    <section class="section" aria-label="What we kept and changed">
       <div class="container">
-        <div class="ba" data-reveal>
-          <div>
-            <h3>What's already working — and we kept</h3>
-            <ul class="checks checks--white" id="keep-title">
-              <li>Your brand: Midnight Black, Soft White, Rose and Manrope — straight from your brand guide</li>
-              <li>The cinematic NZ coastline film and the calm, unhurried tone</li>
-              <li>Your programmes, pricing, RBP co-funding message and FAQs, word for word</li>
-              <li>Strong foundations for search and AI assistants (structured data, llms.txt)</li>
-            </ul>
+        <div class="head-top"><span class="label">(00) — The short version</span><span class="label">Kept · changed</span></div>
+        <div class="bento">
+          <div class="tile tile--light b-half">
+            <span class="label">What's working — and we kept</span>
+            <ul class="checks"><li>Your brand: Midnight Black, Soft White and Rose, straight from your brand guide</li><li>The NZ coastline film and calm, unhurried tone</li><li>Your programmes, pricing, RBP message and FAQs, word for word</li><li>Strong foundations for search and AI assistants</li></ul>
           </div>
-          <div>
-            <h3>What changes for a senior executive visitor</h3>
-            <ul class="checks checks--white">
-              <li>Executive coaching gets its own page instead of one word in a services list</li>
-              <li>"Get in touch" becomes a two-minute booking with a real time on your calendar</li>
-              <li>The nine-pillar framework becomes something they can see — and score themselves on</li>
-              <li>Every page ends in one clear next step</li>
-            </ul>
+          <div class="tile tile--rose b-half">
+            <span class="label">What changes for a senior executive visitor</span>
+            <ul class="checks"><li>Executive coaching gets its own page, not one word in a services list</li><li>“Get in touch” becomes a two-minute booking with a real time</li><li>The nine-pillar framework becomes something they can see — and score themselves on</li><li>Every page ends in one clear next step</li></ul>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section section--line" aria-label="The ideas">
+    <section class="section section--flush-top" aria-label="The ideas">
       <div class="container">
-        <article class="idea" data-reveal>
-          <span class="idea__n">01</span>
-          <div><h2>A dedicated executive coaching page</h2><p class="lead">Coaching is your highest-value, most personal offer — but today it's a single line under "Services". Leaders searching "executive coach Auckland" need a page that speaks to them directly.</p><a class="link-arrow" style="margin-top:var(--s3)" href="coaching.html">Open the coaching page<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-          <dl><div><dt>What we built</dt><dd>Who it's for, the six things leaders bring to coaching, a four-step process, three engagement shapes, confidentiality FAQs and your own words on starting with "why".</dd></div><div><dt>Why it matters</dt><dd>A focused page ranks for coaching searches and answers the questions a CEO asks before they'll book — so the people who reach out are already a good fit.</dd></div></dl>
-        </article>
-        <article class="idea" data-reveal>
-          <span class="idea__n">02</span>
-          <div><h2>A booking path that qualifies as it books</h2><p class="lead">Four quick steps — focus, role &amp; organisation size, time, details — before a discovery call lands in your diary.</p><a class="link-arrow" style="margin-top:var(--s3)" href="coaching.html#book">Try the booking flow<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-          <dl><div><dt>What we built</dt><dd>A calendar showing Auckland time with the visitor's own time alongside (useful for Australian clients), a live summary, an "add to calendar" file and Google Calendar link on confirmation.</dd></div><div><dt>Why it matters</dt><dd>You see the person's role, organisation size and focus before the call, and there's no email back-and-forth to find a time. Ready to connect to your Google Calendar or Cal.com so availability is always real.</dd></div></dl>
-        </article>
-        <article class="idea" data-reveal>
-          <span class="idea__n">03</span>
-          <div><h2>An AI leadership readiness check</h2><p class="lead">Nine statements, one per pillar. Three minutes. An instant score, a radar profile, their biggest opportunity and a recommended next step.</p><a class="link-arrow" style="margin-top:var(--s3)" href="assessment.html">Take the check<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-          <dl><div><dt>What we built</dt><dd>The result flows straight into the booking form — "Readiness check result attached · 58%" — so the discovery call starts where the leader actually is.</dd></div><div><dt>Why it matters</dt><dd>It turns visitors who aren't ready to "get in touch" into warm leads, and gives you a talking point that's uniquely yours. It's also a natural asset to share in chamber and RBP networks.</dd></div></dl>
-        </article>
-        <article class="idea" data-reveal>
-          <span class="idea__n">04</span>
-          <div><h2>Your nine pillars, made visible</h2><p class="lead">The framework is your intellectual property and your clearest differentiator — but on the current site it's mentioned, not shown.</p><a class="link-arrow" style="margin-top:var(--s3)" href="approach.html">See the approach page<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-          <dl><div><dt>What we built</dt><dd>An interactive dial on the home page and a full approach page with a reflective question for each pillar.</dd></div><div><dt>Why it matters</dt><dd>Seeing a considered framework builds authority before a single conversation. <span class="rose">We drafted the pillar names from your published themes — we'd love to swap in your exact wording.</span></dd></div></dl>
-        </article>
-        <article class="idea" data-reveal>
-          <span class="idea__n">05</span>
-          <div><h2>An RBP co-funding calculator</h2><p class="lead">"50% co-funding" is a strong offer — showing the actual number for a team of twelve makes it real.</p><a class="link-arrow" style="margin-top:var(--s3)" href="programmes.html#calculator">Try the calculator<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-          <dl><div><dt>What we built</dt><dd>Choose a programme, slide the number of participants, toggle RBP and GST, and see the investment per person and in total.</dd></div><div><dt>Why it matters</dt><dd>It removes price friction for HR and people leaders, and the team enquiry arrives with the programme and headcount already filled in.</dd></div></dl>
-        </article>
-        <article class="idea" data-reveal>
-          <span class="idea__n">06</span>
-          <div><h2>Clear paths for every kind of buyer</h2><p class="lead">An executive, an HR lead and an event organiser each want something different. Each now finds their path in one click.</p><a class="link-arrow" style="margin-top:var(--s3)" href="speaking.html">See the speaking page<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-          <dl><div><dt>What we built</dt><dd>Separate coaching, programmes, speaking and about pages, signature keynote topics, and an enquiry form that adapts: participants and RBP status for programmes, date and audience size for speaking.</dd></div><div><dt>Why it matters</dt><dd>Better-shaped enquiries, faster replies, and a site that's ready to grow as new courses launch.</dd></div></dl>
-        </article>
+        <div class="head-top"><span class="label">(01) — Seven ideas</span><span class="label">Each one live on this site</span></div>
+        <article class="idea" data-reveal><span class="idea__n">01</span><div><h2>A dedicated executive coaching page</h2><p class="lede">Coaching is your most personal, highest-value offer. Leaders searching “executive coach Auckland” need a page that speaks to them directly.</p><a class="link" style="margin-top:20px" href="coaching.html">Open the coaching page <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><dl><div><dt>What we built</dt><dd>Who it's for, the work leaders bring, three engagement shapes, a four-step process, confidentiality FAQs and your own words on starting with “why”.</dd></div><div><dt>Why it matters</dt><dd>It ranks for coaching searches and answers a CEO's questions before they book — so the people who reach out are already a good fit.</dd></div></dl></article>
+        <article class="idea" data-reveal><span class="idea__n">02</span><div><h2>A booking path that qualifies as it books</h2><p class="lede">Four quick steps — focus, role &amp; organisation size, time, details — before a discovery call lands in your diary.</p><a class="link" style="margin-top:20px" href="coaching.html#book">Try the booking flow <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><dl><div><dt>What we built</dt><dd>Auckland time with the visitor's own time alongside (handy for Australian clients), a live summary, and “add to calendar” on confirmation.</dd></div><div><dt>Why it matters</dt><dd>You see who you're talking to before the call, with no email back-and-forth. Ready to connect to your Google Calendar or Cal.com.</dd></div></dl></article>
+        <article class="idea" data-reveal><span class="idea__n">03</span><div><h2>An AI leadership readiness check</h2><p class="lede">Nine statements, one per pillar, three minutes — an instant score, radar profile and next step.</p><a class="link" style="margin-top:20px" href="assessment.html">Take the check <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><dl><div><dt>What we built</dt><dd>The result flows into the booking form, so the call starts where the leader actually is.</dd></div><div><dt>Why it matters</dt><dd>It turns visitors who aren't ready to “get in touch” into warm leads — and it's easy to share in chamber and RBP networks.</dd></div></dl></article>
+        <article class="idea" data-reveal><span class="idea__n">04</span><div><h2>Your nine pillars, made visible</h2><p class="lede">The framework is your clearest differentiator — on the current site it's mentioned, not shown.</p><a class="link" style="margin-top:20px" href="approach.html">See the approach page <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><dl><div><dt>What we built</dt><dd>A pinned, sideways-scrolling showcase of all nine pillars, plus a reflective question for each.</dd></div><div><dt>Please check</dt><dd class="rose">We drafted the pillar names from your published themes — we'd love to swap in your exact wording.</dd></div></dl></article>
+        <article class="idea" data-reveal><span class="idea__n">05</span><div><h2>“Flip the thought” — a ten-second taste of coaching</h2><p class="lede">A switch that turns a common AI fear into a calmer reframe, right on the home page.</p><a class="link" style="margin-top:20px" href="index.html">Try it on the home page <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><dl><div><dt>What we built</dt><dd>Five fears leaders often voice, each with a reframe in your tone.</dd></div><div><dt>Why it matters</dt><dd>Visitors feel what working with you is like before they ever book — a memorable, very human moment.</dd></div></dl></article>
+        <article class="idea" data-reveal><span class="idea__n">06</span><div><h2>An RBP co-funding calculator</h2><p class="lede">“50% co-funding” is strong — showing the number for a team of twelve makes it real.</p><a class="link" style="margin-top:20px" href="programmes.html#calculator">Try the calculator <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><dl><div><dt>What we built</dt><dd>A quick slider on the flagship programme, plus a full calculator with programmes, RBP and GST.</dd></div><div><dt>Why it matters</dt><dd>It removes price friction for HR leads, and the enquiry arrives with programme and headcount filled in.</dd></div></dl></article>
+        <article class="idea" data-reveal><span class="idea__n">07</span><div><h2>Clear paths for every buyer</h2><p class="lede">An executive, an HR lead and an event organiser each find their path in one click.</p><a class="link" style="margin-top:20px" href="speaking.html">See the speaking page <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><dl><div><dt>What we built</dt><dd>Separate coaching, programmes, speaking and about pages, and an enquiry form that adapts to the type of enquiry.</dd></div><div><dt>Why it matters</dt><dd>Better-shaped enquiries, faster replies, and a site ready to grow as new courses launch.</dd></div></dl></article>
       </div>
     </section>
 
-    <section class="section section--ink" aria-labelledby="confirm-title">
-      <div class="container split">
-        <div class="sticky">
-          <span class="eyebrow" data-reveal>Over to you</span>
-          <h2 class="h2" id="confirm-title" style="margin-top:var(--s3)" data-split>A few things<br>to <em>confirm.</em></h2>
-          <p class="lead" style="margin-top:var(--s4)" data-reveal>Everything here uses your published content. Where we had to fill a gap, we've written it in your voice for you to approve or change.</p>
+    <div class="panel-frame" data-theme="light">
+      <section class="section" aria-labelledby="confirm-title">
+        <div class="container">
+          <div class="head-top"><span class="label">(02) — Over to you</span><span class="label">A few things to confirm</span></div>
+          <div class="familiar">
+            <div class="familiar__side"><h2 class="h-xl" id="confirm-title" data-split>A few things to <em>confirm.</em></h2><p class="lede">Everything uses your published content. Where we filled a gap, we wrote it in your voice for you to approve or change.</p></div>
+            <ol class="familiar__list">
+              <li class="familiar__item">Pillar names — drafted from the themes on polish.nz.</li>
+              <li class="familiar__item">Coaching shapes, session lengths and your discovery-call hours.</li>
+              <li class="familiar__item">Two or three client testimonials — the biggest single boost to the coaching page.</li>
+              <li class="familiar__item">Where it lives: added to your current site, or delivered as a complete site.</li>
+            </ol>
+          </div>
         </div>
-        <ol class="steps" data-stagger=".06">
-          <li class="step" data-reveal><span class="step__n">01</span><div><h3>Pillar names</h3><p>Drafted from the themes on polish.nz — strategy, communication, psychological safety, culture, change readiness and more.</p></div></li>
-          <li class="step" data-reveal><span class="step__n">02</span><div><h3>Coaching shapes &amp; availability</h3><p>The three-month, six-month and leadership-team options, session lengths and the hours you'd like to offer for discovery calls.</p></div></li>
-          <li class="step" data-reveal><span class="step__n">03</span><div><h3>Client voices</h3><p>Two or three short testimonials from leaders you've coached would be the single biggest boost to the coaching page.</p></div></li>
-          <li class="step" data-reveal><span class="step__n">04</span><div><h3>Where it lives</h3><p>We can add these pages to your current site or deliver them as a complete, fast, static site — whichever is easier for you.</p></div></li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="section section--flush-top" style="padding-top:var(--section)" aria-labelledby="next-title">
-      <div class="container">
-        <div class="cta-band" data-reveal="scale">
-          <div class="cta-band__bg"><img src="assets/img/coast-0.5.jpg" alt="" loading="lazy" width="1280" height="720"></div>
-          <span class="eyebrow">Next step</span>
-          <h2 class="h1" id="next-title">A 20-minute <em>walkthrough?</em></h2>
-          <p class="lead">Simply reply to my email with a time that suits — I'll walk you through it and tailor anything that doesn't feel like Polish.</p>
-          <div class="btn-row"><a class="btn btn--rose" href="index.html">Explore the full site<svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn btn--glass" href="coaching.html#book">Try the booking flow</a></div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
+    <div style="height:var(--section)"></div>
 
   </main>
   <footer class="site-footer">
-    <div class="container">
+    <div class="site-footer__inner">
       <div class="footer-top">
-        <div class="footer-brand">
-          <img src="assets/brand/polish-logo-landscape-REV.png" alt="Polish" width="126" height="34" loading="lazy">
-          <p>Leadership development for the age of AI. Helping leaders, teams and organisations across Aotearoa and Australia lead well through change.</p>
-          <span class="tagline">strategy · passion · growth</span>
+        <div>
+          <span class="label label--dot">Ready when you are</span>
+          <h2 class="h-xl footer-top__title">Let's talk about <em>your</em> change.</h2>
+        </div>
+        <div class="footer-top__side">
+          <p class="lede">A relaxed, confidential thirty minutes about where you are, what you want to change, and whether Polish is the right fit.</p>
+          <div class="row">
+            <a class="btn btn--rose" href="coaching.html#book" data-cursor="Book">Book a discovery call <span class="btn__icon" aria-hidden="true"><svg  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+            <a class="btn btn--glass" href="contact.html">Send an enquiry</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col footer-col--brand">
+          <img src="assets/brand/polish-logo-landscape-REV.png" alt="Polish" width="112" height="30" loading="lazy">
+          <p class="small">Leadership development for the age of AI — helping leaders, teams and organisations across Aotearoa and Australia lead well through change.</p>
+          <span class="label label--rose">strategy · passion · growth</span>
         </div>
         <div class="footer-col">
-          <h4>Work with us</h4>
+          <span class="label">Work with us</span>
           <ul>
             <li><a href="coaching.html">Executive coaching</a></li>
             <li><a href="programmes.html">Programmes &amp; courses</a></li>
@@ -180,7 +183,7 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Polish</h4>
+          <span class="label">Polish</span>
           <ul>
             <li><a href="approach.html">The nine pillars</a></li>
             <li><a href="about.html">About Melissa</a></li>
@@ -189,7 +192,7 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Get in touch</h4>
+          <span class="label">Say hello</span>
           <ul>
             <li><a href="mailto:hello@polish.nz">hello@polish.nz</a></li>
             <li><a href="tel:+6421646489">+64 21 646 489</a></li>
@@ -198,21 +201,23 @@
           </ul>
         </div>
       </div>
-      <div class="footer-word" aria-hidden="true">lead <em>well</em></div>
-      <div class="footer-bottom">
-        <span>© <span data-year>2026</span> Polish. All rights reserved.</span>
-        <div class="footer-bottom__links">
-          <a href="https://polish.nz/privacy-policy">Privacy</a>
-          <a href="https://polish.nz/terms">Terms</a>
-          <a href="https://polish.nz/terms/business">Terms of Business</a>
-          <a href="https://polish.nz/brand">Brand</a>
-        </div>
+      <div class="footer-mark" aria-hidden="true"><span>Lead</span> <em>well.</em></div>
+      <div class="footer-base">
+        <span>© <span data-year>2026</span> Polish · Auckland, NZ</span>
+        <span><a href="https://polish.nz/privacy-policy">Privacy</a> · <a href="https://polish.nz/terms">Terms</a> · <a href="https://polish.nz/terms/business">Terms of business</a></span>
+        <a href="#main">Back to top ↑</a>
       </div>
     </div>
   </footer>
 
+
+  <a class="sticky-cta" href="coaching.html#book">Book a discovery call <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+
+  <script src="js/vendor/gsap.min.js" defer></script>
+  <script src="js/vendor/ScrollTrigger.min.js" defer></script>
   <script src="js/data.js" defer></script>
   <script src="js/main.js" defer></script>
   
+  <script src="js/motion.js" defer></script>
 </body>
 </html>
