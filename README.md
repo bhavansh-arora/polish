@@ -8,12 +8,11 @@ photography and published copy.
 Cloudflare Pages, S3) or open it with a local server:
 
 ```bash
-cd polish-site
 node build.mjs                                   # rebuild dist/ from src/
 python3 -m http.server 4173 --directory dist     # http://localhost:4173
 ```
 
-No dependencies. Node 18+ for the build script.
+No dependencies. Node 18+ for the build script. Run the commands from the repository root.
 
 ## Pages
 
