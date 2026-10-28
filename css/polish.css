@@ -826,3 +826,6 @@ html.is-entering .curtain.is-leaving { transform: translateY(-100%); transition:
   .hero__eyebrow { margin-bottom: 24px; line-height: 1.6; }
   .hero__eyebrow .hide-sm { display: none; }
 }
+@media (max-width: 899px) {
+  .phero__shade { background: linear-gradient(180deg, rgba(5, 5, 6, .6), rgba(5, 5, 6, .45) 40%, rgba(5, 5, 6, .9) 75%, rgba(5, 5, 6, .96)); }
+}
